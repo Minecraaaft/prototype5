@@ -22,6 +22,8 @@ io.on('connection', (socket) => {
     socket.emit('chooseColor', playerColor[io.engine.clientsCount - 1]);
     
     socket.emit('clientCount', io.engine.clientsCount);
+
+    socket.emit('initialize', game.fen());
     
     socket.on('clientMove', (moveMessage) => {
         if (makeMove(moveMessage.source, moveMessage.target) != null) {

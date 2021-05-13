@@ -1,6 +1,6 @@
 
 
-const socket = io.connect("https://speedchess.org");
+const socket = io.connect();
 
 
 
@@ -45,6 +45,12 @@ socket.on('serverMove', (moveMessage) => {
     updateStatus()
     
 })
+
+socket.on('initialize', (fen) => {
+    game.load(fen);
+    board.position(game.fen());
+    
+});
 
 
 function onDragStart(source, piece, position, orientation) {
@@ -118,18 +124,12 @@ function updateStatus() {
         
     }
     counter++
-    
-       
-
-
-
 }
 
 
 function updatePgn() {
     
     var pgnData = (game.history() + '').replace(/,/g, "");
-    console.log(pgnData)
     if (counter % 2 == 0) {
         var pgnNotationBar = document.getElementsByClassName('turnBar')[0];
         var movePgn = document.createElement('div');
