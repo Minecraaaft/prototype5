@@ -1,0 +1,85 @@
+@font-face {
+    src: url('\GothamPro-Bold.ttf');
+    font-family: 'gotham';
+}
+
+* {
+    margin: 0;
+}
+
+
+.board-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.body {
+    background-color: rgb(94, 73, 64);
+    background: linear-gradient(rgb(94, 73, 64), rgba(0, 0, 0, 1));
+    flex: 0.85;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.site {
+    display: flex;
+}
+
+.sidebar {
+    height: 100vh;
+    flex: 0.15;
+    background-color: #040404;
+    min-width: 200px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'gotham';
+}
+
+.sidebarOption {
+    color: grey;
+    font-size: 16px;
+    height: 40px;
+    cursor: pointer;
+    transition: 100ms color ease-in;
+    display: flex;
+    align-items: center;;
+}
+
+.sidebarOption:hover {
+    color: white;
+}
+
+.sidebarOption span {
+    padding-right: 10px;
+    padding-left: 10px
+}
+
+.turnBar {
+    height: 400px;
+    background-color: rgb(24, 24, 24);
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 8px;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+#status {
+    margin-left: 24px;
+    text-align: center;
+}
+
+.turnBar .move:nth-child(2n){
+    background-color: rgb(24, 24, 24);
+}
+
+.turnBar .move:nth-child(2n - 1){
+    background-color: rgb(40, 40, 40);
+}

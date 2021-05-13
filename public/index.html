@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedChess</title>
+    <link
+        rel="https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="chessboardjs\css\chessboard-1.0.0.min.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="chessboardjs\js\chessboard-1.0.0.min.js"></script>
+    <script src="node_modules\chess.js\chess.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <script src="js\board.js" defer></script>
+
+    <link rel="stylesheet" href="css\styles.css">
+
+</head>
+
+<body>
+    <div class="site">
+        <div class="sidebar">
+            <div class="sidebarOption">
+                <span class="material-icons">home</span>
+                <p>Home</p>
+            </div>
+            <div class="sidebarOption">
+                <span class="material-icons">trending_up</span>
+                <p>Practice</p>
+            </div>
+            <div class="sidebarOption">
+                <span class="material-icons">equalizer</span>
+                <p>Analysis</p>
+            </div>
+            <div class="sidebarOption">
+                <span class="material-icons">folder</span>
+                <p>Your Archieve</p>
+            </div>
+
+
+        </div>
+        <div class="body">
+            <div class="board-container">
+                <div id="myBoard" style="width: 600px"></div>
+            </div>
+            <div>
+                <div id="status"></div>
+                <div class="turnBar">
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>
