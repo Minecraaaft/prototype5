@@ -57,8 +57,6 @@ const {Chess} = require('chess.js');
 var game = new Chess()
 
 function makeMove(source, target) {
-    console.log(source)
-    console.log(target)
 
     // see if the move is legal
     var move = game.move({
