@@ -1,3 +1,4 @@
+//const { Chess } = require("chess.js");
 
 var wasmSupported = typeof WebAssembly === 'object' && WebAssembly.validate(Uint8Array.of(0x0, 0x61, 0x73, 0x6d, 0x01, 0x00, 0x00, 0x00));
 
@@ -5,7 +6,7 @@ var stockfish = new Worker(wasmSupported ? '../node_modules/stockfish/src/stockf
 var counter = -1
 
 stockfish.onmessage = function (event) {
-    console.log(event.data ? event.data : event)
+    //console.log(event.data ? event.data : event)
 
     // 
     if (event.data.substring(0, 8) == "bestmove") {
@@ -19,7 +20,9 @@ stockfish.onmessage = function (event) {
     }
 }
 
-var level = 10;
+
+
+var level = -1;
 var maximumError = 4000 / (level + 1);
 var ProbabilityValue = 10 * level;
 
@@ -38,7 +41,7 @@ var game = new Chess()
 var $status = $('#status')
 var $fen = $('#fen')
 var $pgn = $('#pgn')
-
+game.clear();
 
 function onDragStart(source, piece, position, orientation) {
     // do not pick up pieces if the game is over
@@ -170,6 +173,27 @@ optionsList.forEach((o) => {
         stockfish.postMessage("setoption name Skill Level Maximum error value " + maximumError);
         stockfish.postMessage("setoption name Skill Level Probability value " + ProbabilityValue);
 
-        console.log(level)
+        console.log(level);
     })
 })
+
+// Buttons -----------------------------------------------------
+
+const backButton = document.querySelector("#backButton");
+const forward = document.querySelector("#forwardButton");
+const startButton = document.querySelector("#startButton");
+
+startButton.addEventListener("click", () => {
+    if (level != -1 && game.game_over()) {
+        game.reset();
+        board.position(game.fen())
+    }
+        
+});
+
+backButton.addEventListener("click", () => {
+    game.undo();
+    board.position(game.fen());
+    game.undo();
+    board.position(game.fen());
+});
