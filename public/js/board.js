@@ -1,8 +1,5 @@
 
-
 const socket = io.connect();
-
-
 
 
 var board = null

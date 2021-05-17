@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="node_modules\stockfish.wasm\stockfish.js"></script>
+    <link
+        rel="https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="chessboardjs\css\chessboard-1.0.0.min.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="chessboardjs\js\chessboard-1.0.0.min.js"></script>
+    <script src="node_modules\chess.js\chess.js"></script>
+
+
+    <script src="js\practice.js" defer></script>
+
+    <link rel="stylesheet" href="css\styles.css">
+</head>
+
+<body>
+    <div class="site">
+        <div class="sidebar">
+            <div class="sidebarOption">
+                <span class="material-icons">home</span>
+                <p>Home</p>
+            </div>
+            <a href="practicePage.html">
+                <div class="sidebarOption">
+                    <span class="material-icons">trending_up</span>
+                    <p>Practice</p>
+                </div>
+            </a>
+            <div class="sidebarOption">
+                <span class="material-icons">equalizer</span>
+                <p>Analysis</p>
+            </div>
+            <div class="sidebarOption">
+                <span class="material-icons">folder</span>
+                <p>Your Archieve</p>
+            </div>
+
+
+        </div>
+        <div class="body">
+            <div class="board-container">
+                <div id="myBoard" style="width: 600px"></div>
+            </div>
+            <div>
+                <div id="status"></div>
+
+                <div id="computer-level">
+                    <div class="option-container">
+
+                        <div class="option">
+                            <input type="radio" name="lvl" id="0" class="radio">
+                            <label for="0">0</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="lvl" id="1" class="radio">
+                            <label for="1">1</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="lvl" id="2" class="radio">
+                            <label for="2">2</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="lvl" id="4" class="radio">
+                            <label for="3">3</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="lvl" id="4" class="radio">
+                            <label for="4">4</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="lvl" id="5" class="radio">
+                            <label for="5">5</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="lvl" id="6" class="radio">
+                            <label for="6">6</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="lvl" id="7" class="radio">
+                            <label for="7">7</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="lvl" id="8" class="radio">
+                            <label for="8">8</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="lvl" id="9" class="radio">
+                            <label for="9">9</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="lvl" id="10" class="radio">
+                            <label for="10">10</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="lvl" id="11" class="radio">
+                            <label for="11">11</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="lvl" id="12" class="radio">
+                            <label for="12">12</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="lvl" id="13" class="radio">
+                            <label for="13">13</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="lvl" id="14" class="radio">
+                            <label for="14">14</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="lvl" id="15" class="radio">
+                            <label for="15">15</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="lvl" id="16" class="radio">
+                            <label for="16">16</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="lvl" id="17" class="radio">
+                            <label for="17">17</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="lvl" id="18" class="radio">
+                            <label for="18">18</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="lvl" id="19" class="radio">
+                            <label for="19">19</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="lvl" id="20" class="radio">
+                            <label for="20">20</label>
+                        </div>
+                    </div>
+
+                    <div class="selected">
+                        Choose computer level
+                    </div>
+                </div>
+                <div class="turnBar">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

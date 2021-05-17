@@ -15,8 +15,8 @@
     <script src="chessboardjs\js\chessboard-1.0.0.min.js"></script>
     <script src="node_modules\chess.js\chess.js"></script>
     <script src="/socket.io/socket.io.js"></script>
-    
-    <script src="js\board.js" defer></script>
+
+    <script src="js\board.js"></script>
 
     <link rel="stylesheet" href="css\styles.css">
 
@@ -29,10 +29,12 @@
                 <span class="material-icons">home</span>
                 <p>Home</p>
             </div>
-            <div class="sidebarOption">
-                <span class="material-icons">trending_up</span>
-                <p>Practice</p>
-            </div>
+            <a href="practicePage.html">
+                <div class="sidebarOption">
+                    <span class="material-icons">trending_up</span>
+                    <p>Practice</p>
+                </div>
+            </a>
             <div class="sidebarOption">
                 <span class="material-icons">equalizer</span>
                 <p>Analysis</p>
@@ -56,9 +58,6 @@
             </div>
 
         </div>
-
-
-
     </div>
 
 
