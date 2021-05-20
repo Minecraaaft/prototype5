@@ -2,7 +2,7 @@
 
 var wasmSupported = typeof WebAssembly === 'object' && WebAssembly.validate(Uint8Array.of(0x0, 0x61, 0x73, 0x6d, 0x01, 0x00, 0x00, 0x00));
 
-var stockfish = new Worker(wasmSupported ? '../node_modules/stockfish/src/stockfish.js' : '../node_modules/stockfish.wasm/stockfish.js');
+var stockfish = new Worker(wasmSupported ? '../modules/stockfish/src/stockfish.js' : '../modules/stockfish.wasm/stockfish.js');
 var counter = -1
 
 stockfish.onmessage = function (event) {

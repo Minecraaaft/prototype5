@@ -1,0 +1,60 @@
+{
+  "_args": [
+    [
+      "stockfish@11.0.0",
+      "C:\\Users\\maxma\\vs\\prototype5"
+    ]
+  ],
+  "_from": "stockfish@11.0.0",
+  "_id": "stockfish@11.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-M/+2dCK7G1FXCuM9IrmqibCXcV5sn+rwkvVCVtb5szfMfnxmC3+2Nw79d0RnTbUlWblj+wKVfVpmRqJNkM7fMA==",
+  "_location": "/stockfish",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "stockfish@11.0.0",
+    "name": "stockfish",
+    "escapedName": "stockfish",
+    "rawSpec": "11.0.0",
+    "saveSpec": null,
+    "fetchSpec": "11.0.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/stockfish/-/stockfish-11.0.0.tgz",
+  "_spec": "11.0.0",
+  "_where": "C:\\Users\\maxma\\vs\\prototype5",
+  "author": {
+    "name": "Nathan Rugg",
+    "email": "nmrugg@gmail.com"
+  },
+  "bin": {
+    "stockfishjs": "stockfishjs"
+  },
+  "bugs": {
+    "url": "https://github.com/nmrugg/stockfish.js/issues"
+  },
+  "contributors": [
+    {
+      "name": "Chess.com",
+      "url": "https://www.chess.com"
+    }
+  ],
+  "dependencies": {},
+  "description": "The Stockfish chess engine in Web Assembly (WASM) and JavaScript.",
+  "homepage": "https://github.com/nmrugg/stockfish.js#readme",
+  "keywords": [
+    "chess"
+  ],
+  "license": "GPL",
+  "main": "src/stockfish.js",
+  "name": "stockfish",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nmrugg/stockfish.js.git"
+  },
+  "version": "11.0.0"
+}
