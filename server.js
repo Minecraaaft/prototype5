@@ -5,12 +5,14 @@ const socketio = require('socket.io');
 const fs = require('fs');
 
 const app = express();
-const io = socketio(server);
+
 
 const server = https.createServer({
-    key: fs.readFileSync(path.join(__dirname, 'cert', 'key.pem')),
-    cert: fs.readFileSync(path.join(__dirname, 'cert', 'speedchess_org.pem'))
+    key: fs.readFileSync(path.join(__dirname, 'public', 'cert', 'key.pem')),
+    cert: fs.readFileSync(path.join(__dirname, 'public', 'cert', 'speedchess_org.pem'))
 }, app);
+
+const io = socketio(server);
 
 const playerColor = ['white', 'black'];
 var playerEntered = 0;
