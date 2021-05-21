@@ -1,18 +1,12 @@
 const express = require('express');
-const https = require('https');
+const http = require('http');
 const path = require('path');
 const socketio = require('socket.io');
-const fs = require('fs');
 
 const app = express();
-
-
-const server = https.createServer({
-    key: fs.readFileSync(path.join(__dirname, 'public', 'cert', 'key.pem')),
-    cert: fs.readFileSync(path.join(__dirname, 'public', 'cert', 'speedchess_org.pem'))
-}, app);
-
+const server = http.createServer(app);
 const io = socketio(server);
+
 
 const playerColor = ['white', 'black'];
 var playerEntered = 0;
@@ -54,7 +48,7 @@ io.on('connection', (socket) => {
     })
 })
 
-const PORT = 443 || process.env.PORT;
+const PORT = 80 || process.env.PORT;
 
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`))
 
